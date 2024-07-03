@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { Course } from './interfaces/course.interface';
 
 @Injectable()
 export class CourseService {
-  getCourse(): any[] {
+  async getCourse(): Promise<Course[]> {
     return [
 		{id: '10',
 			number: '1000000',
