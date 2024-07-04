@@ -1,5 +1,12 @@
 {
   "dependencies": {
-    "@nestjs/cli": "^10.3.2"
+    "@nestjs/cli": "^10.3.2",
+    "@nestjs/typeorm": "^10.0.2",
+    "pg": "^8.12.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9"
   }
 }
