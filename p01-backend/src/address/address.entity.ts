@@ -21,6 +21,6 @@ export class Address {
 		@Column()
 		post_code: string
 
-		@ManyToOne(() => User, (user) => user.id)
+		@ManyToOne(() => User, (user) => user.address)
     user: User
 }

@@ -1,7 +1,3 @@
-export class UpdateAddressDto {
-	address?: string
-	sub_district?: string
-	district?: string
-	province?: string
-	post_code?: string
-}
+import { PartialType } from "@nestjs/mapped-types"
+import { CreateAddressDto } from "./createaddress"
+export class UpdateAddressDto extends PartialType(CreateAddressDto) {}
