@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity'
@@ -18,7 +18,7 @@ export class UserService {
   }
 
   findOne(id: number): Promise<User> {
-    return this.userRepository.findOneBy({id});
+		return this.userRepository.findOneBy({id});
   }
 
   async update(id: number, updateUserDto: UpdateUserDto): Promise<User> {

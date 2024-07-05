@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryColumn } from "typeorm"
+import { Entity, Column, PrimaryColumn, ManyToOne } from "typeorm"
+import { User } from '../user/user.entity'
 
 @Entity()
 export class Address {
@@ -19,4 +20,7 @@ export class Address {
 
 		@Column()
 		post_code: string
+
+		@ManyToOne(() => User, (user) => user.id)
+    user: User
 }
