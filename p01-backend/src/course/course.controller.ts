@@ -10,4 +10,9 @@ export class CourseController {
   async getCourse(): Promise<Course[]>{
     return this.courseService.getCourse();
   }
+
+	@Get('/hello')
+	async getHello() {
+		return "say hi";
+	}
 }
